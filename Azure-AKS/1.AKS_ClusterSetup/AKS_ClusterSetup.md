@@ -64,6 +64,7 @@
 	# List Kubernetes Deployments in kube-system namespace
 	
 	kubectl get deploy -n kube-system
+	
 	Observation:
 	1. Should find the deployment with name "ingress-appgw-deployment"
 	2. This is the Azure Application Gateway Ingress Controller Kubernetes Deployment Object
