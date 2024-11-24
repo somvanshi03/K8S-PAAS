@@ -17,7 +17,8 @@
 	
 ## Get the AKS Cluster credentials
 
-	az aks get-credentials --resource-group agicdemo --name agic-cluster
+	az aks get-credentials -g agicdemo -n agic-cluster
+	
 ## Verify Cluster info
 	
 	kubectl get nodes
@@ -31,12 +32,15 @@
 	echo $appGatewayId
 
 ### Get Application Gateway subnet id
+
 	appGatewaySubnetId=$(az network application-gateway show --ids $appGatewayId -o tsv --query "gatewayIPConfigurations[0].subnet.id")
 	echo $appGatewaySubnetId
 
 ### Get AGIC addon identity
+
 	agicAddonIdentity=$(az aks show -n agic-cluster -g agicdemo -o tsv --query "addonProfiles.ingressApplicationGateway.identity.clientId")
 	echo $agicAddonIdentity
 
 ### Assign network contributor role to AGIC addon Managed Identity to subnet that contains the Application Gateway
+
 	az role assignment create --assignee $agicAddonIdentity --scope $appGatewaySubnetId --role "Network Contributor"
