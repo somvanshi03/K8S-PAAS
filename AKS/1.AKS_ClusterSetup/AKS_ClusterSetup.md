@@ -6,9 +6,9 @@
 
 ## Create AKS Cluster
 
-	az aks create --name agic-cluster --resource-group agicdemo --network-plugin azure --enable-managed-identity --enable-addons ingress-appgw --appgw-name agic-appgw --appgw-subnet-cidr "10.255.0.0/16" --node-count 1 --enable-cluster-autoscaler --min-count 1 --max-count 2 --node-vm-size Standard_F2s_v2 --generate-ssh-keys
+	az aks create -n agic-cluster -g agicdemo --network-plugin azure --enable-managed-identity --enable-addons ingress-appgw --appgw-name agic-appgw --appgw-subnet-cidr "10.255.0.0/16" --node-count 1 --enable-cluster-autoscaler --min-count 1 --max-count 2 --node-vm-size Standard_F2s_v2 --generate-ssh-keys
 	or
-	az aks create --resource-group agicdemo --name agic-cluster --os-sku Ubuntu --network-plugin azure --enable-managed-identity --os-sku Ubuntu --appgw-name myApplicationGateway --appgw-subnet-cidr 10.10.0.0/24 --node-count 1 --enable-cluster-autoscaler --min-count 1 --max-count 2 --node-vm-size Standard_F2s_v2 --generate-ssh-keys
+	az aks create -g agicdemo -n agic-cluster --os-sku Ubuntu --network-plugin azure --enable-managed-identity --os-sku Ubuntu --appgw-name myApplicationGateway --appgw-subnet-cidr 10.10.0.0/24 --node-count 1 --enable-cluster-autoscaler --min-count 1 --max-count 2 --node-vm-size Standard_F2s_v2 --generate-ssh-keys
 	
 	--os-sku Ubuntu  ### {AzureLinux, CBLMariner, Mariner, Ubuntu}
 	--enable-aad --enable-azure-rbac
