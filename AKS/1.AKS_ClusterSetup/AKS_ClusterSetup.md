@@ -2,11 +2,11 @@
 
 ## Create Resource Group
 
-	az group create -l eastus --g agicdemo
+	az group create -l eastus -g agicdemo
 
 ## Create AKS Cluster
 
-	az aks create --name agic-cluster --resource-group agicdemo --network-plugin azure --enable-manged-identity --enable-addons ingresss-appgw --appgw-name agic-appgw --appgw-subnet-cidr "10.255.0.0/16" --node-count 1 --enable-cluster-autoscaler --min-count 1 --max-count 2 --generate-ssh-keys
+	az aks create --name agic-cluster --resource-group agicdemo --network-plugin azure --enable-manged-identity --enable-addons ingresss-appgw --appgw-name agic-appgw --appgw-subnet-cidr "10.255.0.0/16" --node-count 1 --enable-cluster-autoscaler --min-count 1 --max-count 2 --node-vm-size Standard_F2s_v2 --generate-ssh-keys
 ## Get the AKS Cluster credentials
 
 	az aks get-credentials --resource-group agicdemo --name agic-cluster
