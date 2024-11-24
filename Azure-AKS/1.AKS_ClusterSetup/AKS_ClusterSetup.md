@@ -60,18 +60,22 @@
 	az role assignment create --assignee $agicAddonIdentity --scope $appGatewaySubnetId --role "Network Contributor"
 
 ## Verify AKS Add On
+
 	# List Kubernetes Deployments in kube-system namespace
-		kubectl get deploy -n kube-system
+	kubectl get deploy -n kube-system
 	Observation:
 	1. Should find the deployment with name "ingress-appgw-deployment"
 	2. This is the Azure Application Gateway Ingress Controller Kubernetes Deployment Object
 
 ## List Pods
+
 	kubectl get pods -n kube-system
 
 ## Describe Pod
+
 	kubectl -n kube-system describe pod <AGIC-POD-NAME>
-	kubectl -n kube-system describe pod ingress-appgw-deployment-55965f45cf-x28fm  
+	kubectl -n kube-system describe pod ingress-appgw-deployment-55965f45cf-x28fm 
+	
 	Observation:
 	1. Review the line where you can find ingress current version downloaded
 	2. Pulling image "mcr.microsoft.com/azure-application-gateway/kubernetes-ingress:1.5.3"
