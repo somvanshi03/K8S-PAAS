@@ -15,6 +15,20 @@
 	--enable-ultra-ssd
 	--node-osdisk-size 48
 	
+## Create application gateway with vNet.
+
+	az network public-ip create -n ingress-appgw-ip -g agicdemo --allocation-method Static --sku Standard
+
+	az network vnet create -n AKS-vNet -g agicdemo --address-prefix 10.20.0.0/16 --subnet-name AKS-Subnet --subnet-prefix 10.20.0.0/24 
+
+	az network application-gateway create -n appgw -g agicdemo --sku Standard_v2 --public-ip-address ingress-appgw-ip --vnet-name AKS-vNet --subnet AKS-Subnet --priority 100
+
+
+
+	appgwId=$(az network application-gateway show -n appgw -g agicdemo -o tsv --query "id") 
+
+	az aks enable-addons --name agic-cluster -g agicdemo --addon ingress-appgw --appgw-id $appgwId
+	
 ## Get the AKS Cluster credentials
 
 	az aks get-credentials -g agicdemo -n agic-cluster
