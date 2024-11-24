@@ -62,6 +62,7 @@
 ## Verify AKS Add On
 
 	# List Kubernetes Deployments in kube-system namespace
+	
 	kubectl get deploy -n kube-system
 	Observation:
 	1. Should find the deployment with name "ingress-appgw-deployment"
