@@ -12,4 +12,4 @@
 
 ## Create Ingress Controller with Public IP and access app using DNS Name(Register DNS and dont need to mention Domain name anywhere in ingress controller file).
 
- 
+## 
