@@ -1,0 +1,10 @@
+apiVersion: networking.gke.io/v1
+kind: SSLPolicy
+metadata:
+  name: custom-ssl-policy
+spec:
+  minTlsVersion: TLS_1_2 # Minimum TLS version (can also use TLS_1_3)
+  profile: CUSTOM
+  customCipherSuites:
+    - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+    - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
