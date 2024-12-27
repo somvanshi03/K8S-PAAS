@@ -12,4 +12,4 @@
 
 ## Day-5: Create Ingress Controller with Public IP and access app using DNS Name(Register DNS and dont need to mention Domain name anywhere in ingress controller file).
 
-## Day-6: Create SSL certificate with Ingress Controller for SSL sites. then need to create Google managed certificate using yaml file. and Subdomain also be added already.
+## Day-6: Create SSL certificate with Ingress Controller for SSL sites. then need to create Google managed certificate using yaml file. and add subdomain manually.
