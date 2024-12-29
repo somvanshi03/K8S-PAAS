@@ -21,7 +21,6 @@
 ### Day-9: CI Task: 
 	
 	> Enable Google Cloud Source, Cloud Build, Artifacts Registry APIs.
-	
 	> Create Artifacts repo and Source Repo and Clone repo and Upload Code.
+	> Build App and store Artifacts into ArtifactsRepo and Deploy application on GKE Cluster using cloud Deploy service.
 	
-	> 
