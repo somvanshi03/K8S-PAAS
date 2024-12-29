@@ -17,3 +17,11 @@
 ### Day-7:  External DNS with Service account and IAM roles
 
 ### Day-8: NameBased virtual Host Routing
+
+### Day-9: CI Task: 
+	
+	> Enable Google Cloud Source, Cloud Build, Artifacts Registry APIs.
+	
+	> Create Artifacts repo and Source Repo and Clone repo and Upload Code.
+	
+	> 
