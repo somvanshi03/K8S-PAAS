@@ -1,4 +1,4 @@
-# Integrate GCP with ArgoCD
+# Integrate GKE with ArgoCD
 
 ## Steps to Integrate ArgoCD
 
@@ -11,9 +11,7 @@
 
 	> Private GKE cluster dont have internet access.
 	> Need to create NAT rule in default vpc. so cluster can pull the docker images.
-	> 
-	
-	
+		
 	
 ## Create GKE Private Cluster with Authorized Networks option enabled
 
