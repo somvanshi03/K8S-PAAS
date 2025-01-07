@@ -63,16 +63,15 @@
 
 ### argocd-server
 		
-		The Argo CD Server is a key component of the Argo CD (Argo Continuous Delivery) platform. It serves as the API and web interface for interacting with Argo CD, allowing users to manage and monitor applications and their deployments within a Kubernetes environment. The Argo CD Server interacts with other components like the Argo CD Application Controller and the Argo CD Repo Server to manage GitOps workflows.
-		
+	The Argo CD Server is a key component of the Argo CD (Argo Continuous Delivery) platform. It serves as the API and web interface for interacting with Argo CD, allowing users to manage and monitor applications and their deployments within a Kubernetes environment. The Argo CD Server interacts with other components like the Argo CD Application Controller and the Argo CD Repo Server to manage GitOps workflows.
 	
 ### argocd-repo
 	
-		Repo Server plays an important role in Argo CD architecture as it is responsible for interacting with the Git repository to generate the desired state for all Kubernetes resources that belongs to a given application.
+	Repo Server plays an important role in Argo CD architecture as it is responsible for interacting with the Git repository to generate the desired state for all Kubernetes resources that belongs to a given application.
 	
 ### argocd-redis
 	
-		Redis is used by Argo CD to provide a cache layer reducing requests sent to the Kube API as well as to the Git provider. It also supports a few UI operations.
+	Redis is used by Argo CD to provide a cache layer reducing requests sent to the Kube API as well as to the Git provider. It also supports a few UI operations.
 	
 ### argocd-notification-controller
 	
