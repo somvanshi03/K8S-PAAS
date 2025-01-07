@@ -59,25 +59,25 @@
 		
 ## ArgoCD Component
 
-	### argocd-server
+### argocd-server
 		
 		This is arogcd api server which we interacts argocd via GUI and CLI. and It takes request from user.
 	
-	### argocd-repo
+### argocd-repo
 	
 		This workes with verion control system to store manifest files. and argocd only supports git based version control.
 	
-	### argocd-redis
+### argocd-redis
 	
 		This keeps for caching the data.
 	
-	### argocd-notification-controller
+### argocd-notification-controller
 	
 	
-	### argocd-dex-Server
+### argocd-dex-Server
 	
 	
-	### argocd-application-controller
+### argocd-application-controller
 	
 	
-	### argocd-applicationset-controller
+### argocd-applicationset-controller
