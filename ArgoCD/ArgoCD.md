@@ -56,6 +56,8 @@
 		
 		argocd app create app-spring-petclinic --repo https://github.com/redhat-developer/openshift-gitops-getting-started.git --path app --revision main --dest-server https://kubernetes.default.svc --dest-namespace spring-petclinic --directory-recurse --sync-policy automated --self-heal --sync-option Prune=true --sync-option CreateNamespace=true
 		
+		kubectl get application -n argocd 
+		
 		
 ## ArgoCD Component
 
@@ -65,19 +67,24 @@
 	
 ### argocd-repo
 	
-		This workes with verion control system to store manifest files. and argocd only supports git based version control.
+		Repo Server plays an important role in Argo CD architecture as it is responsible for interacting with the Git repository to generate the desired state for all Kubernetes resources that belongs to a given application.
 	
 ### argocd-redis
 	
-		This keeps for caching the data.
+		Redis is used by Argo CD to provide a cache layer reducing requests sent to the Kube API as well as to the Git provider. It also supports a few UI operations.
 	
 ### argocd-notification-controller
 	
+	The Argo CD Notification Controller is a component within the Argo CD ecosystem, which is a continuous delivery (CD) tool for Kubernetes applications. It allows you to integrate Argo CD with notification systems, enabling you to receive alerts or notifications on specific events related to the state of your applications and clusters.
 	
 ### argocd-dex-Server
 	
+	Argo CD relies on Dex to provide authentication with external OIDC providers. However other tools can be used instead of Dex. Check the user management documentation for more details.
 	
 ### argocd-application-controller
-	
+
+	The Application Controller is responsible for reconciling the Application resource in Kubernetes synchronizing the desired application state (provided in Git) with the live state (in Kubernetes). The Application Controller is also responsible for reconciling the Project resource.	
 	
 ### argocd-applicationset-controller
+
+	The ApplicationSet Controller is responsible for reconciling the ApplicationSet resource.
