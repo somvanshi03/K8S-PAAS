@@ -63,7 +63,8 @@
 
 ### argocd-server
 		
-		This is arogcd api server which we interacts argocd via GUI and CLI. and It takes request from user.
+		The Argo CD Server is a key component of the Argo CD (Argo Continuous Delivery) platform. It serves as the API and web interface for interacting with Argo CD, allowing users to manage and monitor applications and their deployments within a Kubernetes environment. The Argo CD Server interacts with other components like the Argo CD Application Controller and the Argo CD Repo Server to manage GitOps workflows.
+		
 	
 ### argocd-repo
 	
