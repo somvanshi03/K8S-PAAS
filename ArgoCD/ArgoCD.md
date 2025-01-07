@@ -46,7 +46,6 @@
 
 ## Install ArgoCD using CLI
 	
-	
 	### Create application 
 		
 		Ref: https://argo-cd.readthedocs.io/en/stable/user-guide/commands/argocd_app_create/
